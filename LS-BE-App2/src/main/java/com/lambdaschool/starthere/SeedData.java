@@ -1,8 +1,5 @@
 package com.lambdaschool.starthere;
 
-import com.github.javafaker.Faker;
-import com.github.javafaker.service.FakeValuesService;
-import com.github.javafaker.service.RandomService;
 import com.lambdaschool.starthere.models.Role;
 import com.lambdaschool.starthere.models.User;
 import com.lambdaschool.starthere.models.UserRoles;
@@ -112,32 +109,5 @@ public class SeedData implements CommandLineRunner
                            users);
         userService.save(u5);
 
-        // using JavaFaker create a bunch of regular users
-        // https://www.baeldung.com/java-faker
-        // https://www.baeldung.com/regular-expressions-java
-
-        FakeValuesService fakeValuesService = new FakeValuesService(new Locale("en-US"),
-                                                                    new RandomService());
-        Faker nameFaker = new Faker(new Locale("en-US"));
-
-        for (int i = 0; i < 100; i++)
-        {
-            new User();
-            User fakeUser;
-
-            users = new ArrayList<>();
-            users.add(new UserRoles(new User(),
-                                    r2));
-            fakeUser = new User(nameFaker.name()
-                                         .username(),
-                                "password",
-                                nameFaker.internet()
-                                         .emailAddress(),
-                                users);
-            fakeUser.getUseremails()
-                    .add(new Useremail(fakeUser,
-                                       fakeValuesService.bothify("????##@gmail.com")));
-            userService.save(fakeUser);
-        }
     }
 }
