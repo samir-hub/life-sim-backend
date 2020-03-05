@@ -29,20 +29,42 @@ public class Details extends Auditable
                       example = "Business")
     private String major;
 
-    @ApiModelProperty(name = "state",
-                      value = "Does the user's state collect income tax?",
-                      example = "No State Income Tax")
-    private String state;
-
     @ApiModelProperty(name = "city",
                       value = "User's city size",
                       example = "Small City")
     private String city;
 
-    @ApiModelProperty(name = "col",
-                      value = "User's cost of living",
-                      example = "Low Cost of Living")
-    private String col;
+    @ApiModelProperty(name = "colindex",
+                      value = "Cost of living index",
+                      example = "No College")
+    private String colindex;
+
+    @ApiModelProperty(name = "Rent index",
+                      value = "Major for User",
+                      example = "Business")
+    private String rentindex;
+
+    @ApiModelProperty(name = "Cost of living plus rent index",
+                      value = "User's city size",
+                      example = "Small City")
+    private String colplusrentindex;
+
+    @ApiModelProperty(name = "Groceries index",
+                      value = "Education for User",
+                      example = "No College")
+    private String groceriesindex;
+
+    @ApiModelProperty(name = "Restaurant price index",
+                      value = "Major for User",
+                      example = "Business")
+    private String restaurantpriceindex;
+
+    @ApiModelProperty(name = "city",
+                      value = "User's city size",
+                      example = "Small City")
+    private String localpurchasingpowerindex;
+
+
 
     @ApiModelProperty(name = "user", value = "user that the details are for", required = true, example = "User 20")
     @ManyToOne
