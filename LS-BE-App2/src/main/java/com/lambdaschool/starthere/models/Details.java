@@ -39,28 +39,28 @@ public class Details extends Auditable
                       example = "No College")
     private String colindex;
 
-    @ApiModelProperty(name = "Rent index",
+    @ApiModelProperty(name = "rentindex",
                       value = "Major for User",
                       example = "Business")
     private String rentindex;
 
-    @ApiModelProperty(name = "Cost of living plus rent index",
+    @ApiModelProperty(name = "colplusrentindex",
                       value = "User's city size",
                       example = "Small City")
     private String colplusrentindex;
 
-    @ApiModelProperty(name = "Groceries index",
+    @ApiModelProperty(name = "groceriesindex",
                       value = "Education for User",
                       example = "No College")
     private String groceriesindex;
 
-    @ApiModelProperty(name = "Restaurant price index",
+    @ApiModelProperty(name = "restaurantpriceindex",
                       value = "Major for User",
                       example = "Business")
     private String restaurantpriceindex;
 
-    @ApiModelProperty(name = "city",
-                      value = "User's city size",
+    @ApiModelProperty(name = "",
+                      value = "localpurchasingpowerindex",
                       example = "Small City")
     private String localpurchasingpowerindex;
 
@@ -76,16 +76,19 @@ public class Details extends Auditable
     {
     }
 
-    public Details(String education, String major, String state, String city, String col, User user)
+    public Details(String education, String major, String city, String colindex, String rentindex, String colplusrentindex, String groceriesindex, String restaurantpriceindex, String localpurchasingpowerindex, User user)
     {
         this.education = education;
         this.major = major;
-        this.state = state;
         this.city = city;
-        this.col = col;
+        this.colindex = colindex;
+        this.rentindex = rentindex;
+        this.colplusrentindex = colplusrentindex;
+        this.groceriesindex = groceriesindex;
+        this.restaurantpriceindex = restaurantpriceindex;
+        this.localpurchasingpowerindex = localpurchasingpowerindex;
         this.user = user;
     }
-
 
     public long getDetailsid()
     {
@@ -117,16 +120,6 @@ public class Details extends Auditable
         this.major = major;
     }
 
-    public String getState()
-    {
-        return state;
-    }
-
-    public void setState(String state)
-    {
-        this.state = state;
-    }
-
     public String getCity()
     {
         return city;
@@ -137,14 +130,64 @@ public class Details extends Auditable
         this.city = city;
     }
 
-    public String getCol()
+    public String getColindex()
     {
-        return col;
+        return colindex;
     }
 
-    public void setCol(String col)
+    public void setColindex(String colindex)
     {
-        this.col = col;
+        this.colindex = colindex;
+    }
+
+    public String getRentindex()
+    {
+        return rentindex;
+    }
+
+    public void setRentindex(String rentindex)
+    {
+        this.rentindex = rentindex;
+    }
+
+    public String getColplusrentindex()
+    {
+        return colplusrentindex;
+    }
+
+    public void setColplusrentindex(String colplusrentindex)
+    {
+        this.colplusrentindex = colplusrentindex;
+    }
+
+    public String getGroceriesindex()
+    {
+        return groceriesindex;
+    }
+
+    public void setGroceriesindex(String groceriesindex)
+    {
+        this.groceriesindex = groceriesindex;
+    }
+
+    public String getRestaurantpriceindex()
+    {
+        return restaurantpriceindex;
+    }
+
+    public void setRestaurantpriceindex(String restaurantpriceindex)
+    {
+        this.restaurantpriceindex = restaurantpriceindex;
+    }
+
+    public String getLocalpurchasingpowerindex()
+    {
+        return localpurchasingpowerindex;
+    }
+
+    public void setLocalpurchasingpowerindex(String localpurchasingpowerindex)
+    {
+        this.localpurchasingpowerindex = localpurchasingpowerindex;
     }
 
     public User getUser()
