@@ -76,7 +76,7 @@ public class DetailsController
                                            @PathVariable long userid)
     {   newDetails.setUser(userService.findUserById(userid));
         detailsService.save(newDetails);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return new ResponseEntity<>(newDetails, HttpStatus.CREATED);
     }
 
     // http://localhost:2019/data/details/1
