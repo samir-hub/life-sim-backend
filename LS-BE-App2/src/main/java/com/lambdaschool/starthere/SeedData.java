@@ -94,7 +94,7 @@ public class SeedData implements CommandLineRunner
         users = new ArrayList<>();
         users.add(new UserRoles(new User(),
                                 r2));
-        User u4 = new User("puttat",
+        User u4 = new User("Samir",
                            "password",
                            "puttat@school.lambda",
                            users);

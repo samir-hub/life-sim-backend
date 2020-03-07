@@ -39,6 +39,16 @@ public class Details extends Auditable
                       example = "No College")
     private String colindex;
 
+    @ApiModelProperty(name = "avgrent",
+                      value = "Average rent for 1 bedroom apartment",
+                      example = "Small City")
+    private String avgrent;
+
+    @ApiModelProperty(name = "avgwage",
+                      value = "Average yearly wage",
+                      example = "No College")
+    private String avgwage;
+
     @ApiModelProperty(name = "rentindex",
                       value = "Major for User",
                       example = "Business")
@@ -59,12 +69,6 @@ public class Details extends Auditable
                       example = "Business")
     private String restaurantpriceindex;
 
-    @ApiModelProperty(name = "",
-                      value = "localpurchasingpowerindex",
-                      example = "Small City")
-    private String localpurchasingpowerindex;
-
-
 
     @ApiModelProperty(name = "user", value = "user that the details are for", required = true, example = "User 20")
     @ManyToOne
@@ -76,17 +80,18 @@ public class Details extends Auditable
     {
     }
 
-    public Details(String education, String major, String city, String colindex, String rentindex, String colplusrentindex, String groceriesindex, String restaurantpriceindex, String localpurchasingpowerindex, User user)
+    public Details(String education, String major, String city, String colindex, String avgrent, String avgwage, String rentindex, String colplusrentindex, String groceriesindex, String restaurantpriceindex, User user)
     {
         this.education = education;
         this.major = major;
         this.city = city;
         this.colindex = colindex;
+        this.avgrent = avgrent;
+        this.avgwage = avgwage;
         this.rentindex = rentindex;
         this.colplusrentindex = colplusrentindex;
         this.groceriesindex = groceriesindex;
         this.restaurantpriceindex = restaurantpriceindex;
-        this.localpurchasingpowerindex = localpurchasingpowerindex;
         this.user = user;
     }
 
@@ -140,6 +145,26 @@ public class Details extends Auditable
         this.colindex = colindex;
     }
 
+    public String getAvgrent()
+    {
+        return avgrent;
+    }
+
+    public void setAvgrent(String avgrent)
+    {
+        this.avgrent = avgrent;
+    }
+
+    public String getAvgwage()
+    {
+        return avgwage;
+    }
+
+    public void setAvgwage(String avgwage)
+    {
+        this.avgwage = avgwage;
+    }
+
     public String getRentindex()
     {
         return rentindex;
@@ -178,16 +203,6 @@ public class Details extends Auditable
     public void setRestaurantpriceindex(String restaurantpriceindex)
     {
         this.restaurantpriceindex = restaurantpriceindex;
-    }
-
-    public String getLocalpurchasingpowerindex()
-    {
-        return localpurchasingpowerindex;
-    }
-
-    public void setLocalpurchasingpowerindex(String localpurchasingpowerindex)
-    {
-        this.localpurchasingpowerindex = localpurchasingpowerindex;
     }
 
     public User getUser()
