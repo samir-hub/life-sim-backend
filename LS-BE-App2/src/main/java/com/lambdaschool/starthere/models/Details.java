@@ -29,6 +29,22 @@ public class Details extends Auditable
                       example = "Business")
     private String major;
 
+    @ApiModelProperty(name = "avgmajor",
+                      value = "Average salary for major",
+                      example = "50000")
+    private String avgmajor;
+
+    @ApiModelProperty(name = "lowmajor",
+                      value = "25th percentile salary for major",
+                      example = "30000")
+    private String lowmajor;
+
+    @ApiModelProperty(name = "highmajor",
+                      value = "75th percentile salary for major",
+                      example = "60000")
+    private String highmajor;
+
+
     @ApiModelProperty(name = "city",
                       value = "User's city size",
                       example = "Small City")
@@ -80,10 +96,13 @@ public class Details extends Auditable
     {
     }
 
-    public Details(String education, String major, String city, String colindex, String avgrent, String avgwage, String rentindex, String colplusrentindex, String groceriesindex, String restaurantpriceindex, User user)
+    public Details(String education, String major, String avgmajor, String lowmajor, String highmajor, String city, String colindex, String avgrent, String avgwage, String rentindex, String colplusrentindex, String groceriesindex, String restaurantpriceindex, User user)
     {
         this.education = education;
         this.major = major;
+        this.avgmajor = avgmajor;
+        this.lowmajor = lowmajor;
+        this.highmajor = highmajor;
         this.city = city;
         this.colindex = colindex;
         this.avgrent = avgrent;
@@ -123,6 +142,36 @@ public class Details extends Auditable
     public void setMajor(String major)
     {
         this.major = major;
+    }
+
+    public String getAvgmajor()
+    {
+        return avgmajor;
+    }
+
+    public void setAvgmajor(String avgmajor)
+    {
+        this.avgmajor = avgmajor;
+    }
+
+    public String getLowmajor()
+    {
+        return lowmajor;
+    }
+
+    public void setLowmajor(String lowmajor)
+    {
+        this.lowmajor = lowmajor;
+    }
+
+    public String getHighmajor()
+    {
+        return highmajor;
+    }
+
+    public void setHighmajor(String highmajor)
+    {
+        this.highmajor = highmajor;
     }
 
     public String getCity()
