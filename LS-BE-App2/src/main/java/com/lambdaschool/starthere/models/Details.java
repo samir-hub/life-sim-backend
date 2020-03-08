@@ -32,17 +32,17 @@ public class Details extends Auditable
     @ApiModelProperty(name = "avgmajor",
                       value = "Average salary for major",
                       example = "50000")
-    private String avgmajor;
+    private float avgmajor;
 
     @ApiModelProperty(name = "lowmajor",
                       value = "25th percentile salary for major",
                       example = "30000")
-    private String lowmajor;
+    private float lowmajor;
 
     @ApiModelProperty(name = "highmajor",
                       value = "75th percentile salary for major",
                       example = "60000")
-    private String highmajor;
+    private float highmajor;
 
 
     @ApiModelProperty(name = "city",
@@ -53,37 +53,37 @@ public class Details extends Auditable
     @ApiModelProperty(name = "colindex",
                       value = "Cost of living index",
                       example = "No College")
-    private String colindex;
+    private float colindex;
 
     @ApiModelProperty(name = "avgrent",
                       value = "Average rent for 1 bedroom apartment",
                       example = "Small City")
-    private String avgrent;
+    private int avgrent;
 
     @ApiModelProperty(name = "avgwage",
                       value = "Average yearly wage",
                       example = "No College")
-    private String avgwage;
+    private int avgwage;
 
     @ApiModelProperty(name = "rentindex",
                       value = "Major for User",
                       example = "Business")
-    private String rentindex;
+    private float rentindex;
 
     @ApiModelProperty(name = "colplusrentindex",
                       value = "User's city size",
                       example = "Small City")
-    private String colplusrentindex;
+    private float colplusrentindex;
 
     @ApiModelProperty(name = "groceriesindex",
                       value = "Education for User",
                       example = "No College")
-    private String groceriesindex;
+    private float groceriesindex;
 
     @ApiModelProperty(name = "restaurantpriceindex",
                       value = "Major for User",
                       example = "Business")
-    private String restaurantpriceindex;
+    private float restaurantpriceindex;
 
 
     @ApiModelProperty(name = "user", value = "user that the details are for", required = true, example = "User 20")
@@ -96,7 +96,7 @@ public class Details extends Auditable
     {
     }
 
-    public Details(String education, String major, String avgmajor, String lowmajor, String highmajor, String city, String colindex, String avgrent, String avgwage, String rentindex, String colplusrentindex, String groceriesindex, String restaurantpriceindex, User user)
+    public Details(String education, String major, float avgmajor, float lowmajor, float highmajor, String city, float colindex, int avgrent, int avgwage, float rentindex, float colplusrentindex, float groceriesindex, float restaurantpriceindex, User user)
     {
         this.education = education;
         this.major = major;
@@ -144,32 +144,32 @@ public class Details extends Auditable
         this.major = major;
     }
 
-    public String getAvgmajor()
+    public float getAvgmajor()
     {
         return avgmajor;
     }
 
-    public void setAvgmajor(String avgmajor)
+    public void setAvgmajor(float avgmajor)
     {
         this.avgmajor = avgmajor;
     }
 
-    public String getLowmajor()
+    public float getLowmajor()
     {
         return lowmajor;
     }
 
-    public void setLowmajor(String lowmajor)
+    public void setLowmajor(float lowmajor)
     {
         this.lowmajor = lowmajor;
     }
 
-    public String getHighmajor()
+    public float getHighmajor()
     {
         return highmajor;
     }
 
-    public void setHighmajor(String highmajor)
+    public void setHighmajor(float highmajor)
     {
         this.highmajor = highmajor;
     }
@@ -184,72 +184,72 @@ public class Details extends Auditable
         this.city = city;
     }
 
-    public String getColindex()
+    public float getColindex()
     {
         return colindex;
     }
 
-    public void setColindex(String colindex)
+    public void setColindex(float colindex)
     {
         this.colindex = colindex;
     }
 
-    public String getAvgrent()
+    public int getAvgrent()
     {
         return avgrent;
     }
 
-    public void setAvgrent(String avgrent)
+    public void setAvgrent(int avgrent)
     {
         this.avgrent = avgrent;
     }
 
-    public String getAvgwage()
+    public int getAvgwage()
     {
         return avgwage;
     }
 
-    public void setAvgwage(String avgwage)
+    public void setAvgwage(int avgwage)
     {
         this.avgwage = avgwage;
     }
 
-    public String getRentindex()
+    public float getRentindex()
     {
         return rentindex;
     }
 
-    public void setRentindex(String rentindex)
+    public void setRentindex(float rentindex)
     {
         this.rentindex = rentindex;
     }
 
-    public String getColplusrentindex()
+    public float getColplusrentindex()
     {
         return colplusrentindex;
     }
 
-    public void setColplusrentindex(String colplusrentindex)
+    public void setColplusrentindex(float colplusrentindex)
     {
         this.colplusrentindex = colplusrentindex;
     }
 
-    public String getGroceriesindex()
+    public float getGroceriesindex()
     {
         return groceriesindex;
     }
 
-    public void setGroceriesindex(String groceriesindex)
+    public void setGroceriesindex(float groceriesindex)
     {
         this.groceriesindex = groceriesindex;
     }
 
-    public String getRestaurantpriceindex()
+    public float getRestaurantpriceindex()
     {
         return restaurantpriceindex;
     }
 
-    public void setRestaurantpriceindex(String restaurantpriceindex)
+    public void setRestaurantpriceindex(float restaurantpriceindex)
     {
         this.restaurantpriceindex = restaurantpriceindex;
     }
