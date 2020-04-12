@@ -39,7 +39,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter
             .antMatchers("/users/**",
                          "/useremails/**",
                          "/oauth/revoke-token",
-                         "/logout")
+                         "/logout", "/details/**", "/data/**")
             .authenticated()
             // restrict application data...
             // .antMatchers("/books", "/authors").hasAnyRole("ADMIN", "USER", "DATA")

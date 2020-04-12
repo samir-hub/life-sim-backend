@@ -15,6 +15,8 @@ public interface DetailsService
 
     Details save (Details details);
 
+    Details update(Details details, long id);
+
     void delete(long id);
 
 }

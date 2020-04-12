@@ -79,6 +79,17 @@ public class DetailsController
         return new ResponseEntity<>(newDetails, HttpStatus.CREATED);
     }
 
+    @PutMapping(value = "data/details/{detailsid}")
+    public ResponseEntity<?> updateDetailsById(
+            @RequestBody
+                    Details updateDetails,
+            @PathVariable
+                    long detailsid)
+    {
+        detailsService.update(updateDetails, detailsid);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
     // http://localhost:2019/data/details/1
     @DeleteMapping("data/details/{detailsid}")
     public ResponseEntity<?> deleteDetailsById(
