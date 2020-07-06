@@ -93,7 +93,4 @@ axios.post('https://samirlilienfeld-mypath.herokuapp.com/login',
 
 ---
 
-
-[Back to Top](#table-of-contents)
-
 ---
