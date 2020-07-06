@@ -1,4 +1,4 @@
-# MyPath -- Back-End
+# MyPath 🏁
 
 MyPath is dedicated to helping high school students and young adults plan for the future. This is the repository for MyPath's back-end. It was built using Java and Spring Boot with a PostgreSQL database. 
 
